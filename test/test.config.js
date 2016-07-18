@@ -1,4 +1,4 @@
-export const config = {
+export default {
 	method: 'getSearchEndpointData',
     dataEndpoint: 'search',
     phrase: 'USDA',

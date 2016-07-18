@@ -1,9 +1,8 @@
 import test from 'blue-tape';
 import NutritionixSource from '../lib/index.js';
-import { config } from './test.config';
+import config from './test.config';
 
 
-// example - make sure configuration is the same
 test('proper configuration', t => {
 	const activity = new NutritionixSource();
 	t.equal(NutritionixSource.props.name, require('../package.json').name);
@@ -11,8 +10,22 @@ test('proper configuration', t => {
 	t.end();
 });
 
-test('oauth onTaskCopy', async (t) => {
+test('testing getSearchEndpointData method', async (t) => {
 	const source = new NutritionixSource();
-	const data = await source.onTaskCopy(config);
-	t.comment(JSON.stringify(data));
+	const data = await source.getSearchEndpointData(config);
+});
+
+test('testing getItemEndpointData method', async (t) => {
+	const source = new NutritionixSource();
+	const data = await source.getItemEndpointData(config);
+});
+
+test('testing getBrandOnlyData method', async (t) => {
+	const source = new NutritionixSource();
+	const data = await source.getBrandOnlyData(config);
+});
+
+test('testing getBrandSearchData method', async (t) => {
+	const source = new NutritionixSource();
+	const data = await source.getBrandSearchData(config);
 });
