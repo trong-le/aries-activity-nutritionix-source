@@ -11,10 +11,10 @@ Returns the data from the Search API endpoint.
 ###2) Get Item Endpoint Data
 Returns the data from the Item API endpoint.
 
-###1) Get Brand Only Endpoint Data
+###3) Get Brand Only Endpoint Data
 Returns the data from the Brand, NOT Brand/Search, API endpoint.
 
-###1) Get Brand Search Endpoint Data
+###4) Get Brand Search Endpoint Data
 Returns the data from the Brand/Search API endpoint.
 
 
